@@ -1,0 +1,21 @@
+(defsrc
+  caps lmet
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
+)
+
+(defalias
+  caps-mod (tap-hold $tap-time $hold-time bspc lctl)
+  lmet-mod (tap-hold $tap-time $hold-time caps lmet)
+)
+
+(deflayer base
+  @caps-mod @lmet-mod
+)
+
+(defcfg
+  process-unmapped-keys yes
+)
