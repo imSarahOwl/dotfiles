@@ -13,13 +13,15 @@ alias srp='source .env/bin/activate'
 alias cd='z'
 alias lg='lazygit'
 export PATH=/usr/local/bin:~/.npm-global/bin:/home/sarah/.local/bin:/home/sarah/.cargo/bin:/home/sarah/.spicetify:/home/sarah/.turso:/home/sarah/go/bin:$PATH
-export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.wine/*.z:*}"'
+export FZF_DEFAULT_COMMAND='fd --type=d --hidden --strip-cwd-prefix --exclude .git'
+
 ANDROID_HOME='/home/sarah/Android/Sdk'
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 QT_QPA_PLATFORMTHEME=qt6ct
 OLLAMA_MODELS=/data/aicrap 
 HSA_OVERRIDE_GFX_VERSION="10.3.0"
+
 parse_git_dirty() {
   git_status="$(git status 2> /dev/null)"
   [[ "$git_status" =~ "Changes to be committed:" ]] && echo -n "%F{green}·%f"
@@ -45,3 +47,4 @@ zstyle ':vcs_info:git*' formats ' ↣ (%F{254}%b%F{245})' # format $vcs_info_msg
 PS1='%F{254}%n%F{245} on %F{153}%(5~|%-1~/⋯/%3~|%4~)%F{245}${vcs_info_msg_0_} $(parse_git_dirty)$NEWLINE%F{254}>%f '
 
 eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
