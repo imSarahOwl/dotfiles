@@ -1,5 +1,7 @@
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "^H" backward-kill-word
+
 alias pacman='sudo pacman'
 alias ls='eza --icons -a --group-directories-first'
 alias open='xdg-open'
