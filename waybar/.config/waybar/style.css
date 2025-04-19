@@ -1,3 +1,5 @@
+@define-color main-bg rgba(46, 52, 64, 0.8);
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, JetBrainsMono Nerd Font, Roboto, Helvetica, Arial, sans-serif;
@@ -8,11 +10,12 @@
 }
 
 window#waybar {
-    background-color: #2E3440;
-    border-bottom: 3px solid #2E3440;
+    background-color: @main-bg;
+    border-bottom: 3px solid @main-bg;
     color: #ECEFF4;
     transition-property: background-color;
     transition-duration: .5s;
+
 }
 
 window#waybar.hidden {
@@ -95,6 +98,7 @@ button:hover {
     color: #ffffff;
 }
 
+
 #window,
 #workspaces {
     margin: 0 4px;
@@ -111,7 +115,8 @@ button:hover {
 }
 
 #clock {
-    background-color: #2E3440;
+    /* background-color: @main-bg; */
+    color: #ECEFF4;
 }
 
 #battery {
@@ -163,15 +168,14 @@ label:focus {
 }
 
 #network {
-    background-color: #2E3440;
+    background-color: @main-bg;
 }
 
 #network.disconnected {
-    background-color: #2E3440;
+    background-color: @main-bg;
 }
 
 #pulseaudio {
-    background-color: #2E3440;
     color: #ECEFF4;
 }
 
@@ -211,9 +215,6 @@ label:focus {
     background-color: #eb4d4b;
 }
 
-#tray {
-    background-color: #2E3440;
-}
 
 #tray > .passive {
     -gtk-icon-effect: dim;
@@ -225,12 +226,12 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2E3440;
+    background-color: @main-bg;
 }
 
 #idle_inhibitor.activated {
     background-color: #ecf0f1;
-    color: #2E3440;
+    color: @main-bg;
 }
 
 #mpd {
