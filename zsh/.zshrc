@@ -15,7 +15,7 @@ alias srp='source .env/bin/activate'
 alias cd='z'
 alias lg='lazygit'
 export PATH=/usr/local/bin:~/.npm-global/bin:/home/sarah/.local/bin:/home/sarah/.cargo/bin:/home/sarah/.spicetify:/home/sarah/.turso:/home/sarah/go/bin:$PATH
-export FZF_DEFAULT_COMMAND='fd --type=d --hidden --strip-cwd-prefix --exclude .git'
+export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
 
 ANDROID_HOME='/home/sarah/Android/Sdk'
 QT_IM_MODULE=ibus
