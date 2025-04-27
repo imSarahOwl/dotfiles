@@ -1,5 +1,5 @@
 (defsrc
-  caps lmet
+  caps lmet i j k l
 )
 
 (defvar
@@ -9,11 +9,15 @@
 
 (defalias
   caps-mod (tap-hold $tap-time $hold-time bspc lctl)
-  lmet-mod (tap-hold $tap-time $hold-time caps lmet)
+  lmet-nav (tap-hold $tap-time $hold-time caps (layer-toggle nav)) 
 )
 
 (deflayer base
-  @caps-mod @lmet-mod
+  @caps-mod @lmet-nav i j k l
+)
+
+(deflayer nav
+  @caps-mod lmet up left down right
 )
 
 (defcfg
