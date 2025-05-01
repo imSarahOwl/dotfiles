@@ -1,5 +1,0 @@
-#!/bin/bash
-
-beepy=/home/sarah/Downloads/$(ls /home/sarah/Downloads | grep Beeper | head -n1)
-
-$beepy
