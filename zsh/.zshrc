@@ -5,10 +5,7 @@ bindkey "^H" backward-kill-word
 alias pacman='sudo pacman'
 alias ls='eza --icons -a --group-directories-first'
 alias open='xdg-open'
-alias al='alacritty --working-directory . &|'
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias flutter='CHROME_EXECUTABLE=chromium flutter'
-alias affinity-photo='rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine "$HOME/.wineAffinity/drive_c/Program Files/Affinity/Photo 2/Photo.exe"'
 alias off='sudo poweroff'
 alias id-open='adb shell dumpsys activity | grep top-activity'
 alias srp='source .env/bin/activate'
@@ -18,11 +15,10 @@ export PATH=/usr/local/bin:~/.npm-global/bin:/home/sarah/.local/bin:/home/sarah/
 export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
 
 ANDROID_HOME='/home/sarah/Android/Sdk'
-QT_IM_MODULE=ibus
-XMODIFIERS=@im=ibus
 QT_QPA_PLATFORMTHEME=qt6ct
 OLLAMA_MODELS=/data/aicrap 
 HSA_OVERRIDE_GFX_VERSION="10.3.0"
+BAT_THEME="Nord"
 
 parse_git_dirty() {
   git_status="$(git status 2> /dev/null)"
